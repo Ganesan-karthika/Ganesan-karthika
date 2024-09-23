@@ -1,0 +1,36 @@
+
+
+/* Reset default margin and padding */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the gallery container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between gallery items */
+    padding: 20px; /* Padding around the gallery */
+}
+
+/* Style each gallery item (image container) */
+.gallery-item {
+    overflow: hidden; /* Hide overflowing parts of the image */
+    border-radius: 8px; /* Rounded corners for the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
+}
+
+/* Ensure images fill their containers */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    animation:2s gallery-item ease-in-out;
+}
+@keyframes gallery-item{
+    0%{
+        opacity:0;
+        transform:translatex(-100%);}
+   }
